@@ -55,7 +55,7 @@
     <br/>
        Vitajte na našej stránke! <br/>
 
-   <<br/><br/><br/><br/><br/>
+   <br/><br/><br/><br/><br/>
 </p>
 
 
