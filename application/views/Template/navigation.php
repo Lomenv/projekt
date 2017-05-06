@@ -24,9 +24,7 @@
                 <li>
                     <a class="page-scroll" href="#services">O nás</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">Portfolio</a>
-                </li>
+
                 <li>
                     <a class="page-scroll" href="#about">Vozidlá</a>
                 </li>
@@ -43,17 +41,22 @@
     <!-- /.container-fluid -->
 </nav>
 
-<header>
+<style>
+    p {
+        font-family: "Comic Sans MS", Times, serif;
+        color:#444444;
+        font-size: 50px;
+    }
+</style>
 
-<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
-            <div class="intro-lead-in">Welcome To Our Studio!</div>
-            <div class="intro-heading">It's Nice To Meet You</div>
-            <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
+<br /> <br /> <br />  <br />
 
+<p align="center">
+    <br/>
+       Vitajte na našej stránke! <br/>
 
-
-</header>
-
+   <<br/><br/><br/><br/><br/>
+</p>
 
 
 </body>
