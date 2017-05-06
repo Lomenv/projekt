@@ -26,13 +26,13 @@
                 </li>
 
                 <li>
-                    <a href="<?php echo site_url('Onas');?>">Vozidlá</a>
+                    <a href="<?php echo site_url('Vozidla');?>">Vozidlá</a>
                 </li>
                 <li>
-                    <a href="<?php echo site_url('Onas');?>">Pracovníci</a>
+                    <a href="<?php echo site_url('Pracovnici');?>">Pracovníci</a>
                 </li>
                 <li>
-                    <a href="<?php echo site_url('Onas');?>">Kontakt</a>
+                    <a href="<?php echo site_url('Kontakt');?>">Kontakt</a>
                 </li>
             </ul>
         </div>
@@ -51,12 +51,6 @@
 
 <br /> <br /> <br />  <br />
 
-<p align="center">
-    <br/>
-       Vitajte na našej stránke! <br/>
-
-   <br/><br/><br/><br/><br/>
-</p>
 
 
-</body>
+
