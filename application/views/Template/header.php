@@ -15,7 +15,7 @@
 <link href="<?php echo base_url();?>assets/css/freelancer.min.css" rel="stylesheet">
 
 
-
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.15/datatables.min.css"/>
 
 
 

@@ -11,4 +11,19 @@
 
         </div>
     </div>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.15/datatables.min.js"></script>
 </footer>
+
+<scrypt type="text/javascript">
+    $(document).ready(function(){
+    $('#vozidlatable').DataTable({
+    "ajax":{
+    url: "<?php echo site_url("vozidla/vozidla_page")?>",
+    type: 'GET'
+    },
+    }};
+    }};
+
+
+
+</scrypt>
