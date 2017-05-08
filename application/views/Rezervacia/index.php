@@ -16,15 +16,9 @@
             text-align: center;
         }
     </style>
-    <br /> <br /> <br />
     <tr>
-        <th>Číslo vozidla</th>
-        <th>Značka</th>
-        <th>Model</th>
-        <th>Počet miest</th>
-        <th>SPŽ</th>
-        <th>Farba</th>
-        <th>Dostupnosť</th>
+        <th>Číslo rezervácie</th>
+        <th>Dátum a čas</th>
 
     </tr>
 
@@ -32,15 +26,10 @@
 
     <tbody>
 
-    <?php foreach ($auto as $auto_item): ?>
+    <?php foreach ($rezervacka as $rezervacka_item): ?>
         <tr style="color: #0b0b0b; background: white;">
-            <td><?php echo $auto_item['idAuto']; ?></td>
-            <td><?php echo $auto_item['znacka']; ?></td>
-            <td><?php echo $auto_item['model']; ?></td>
-            <td><?php echo $auto_item['pocetMiest']; ?></td>
-            <td><?php echo $auto_item['SPZ']; ?></td>
-            <td><?php echo $auto_item['farba']; ?></td>
-            <td><?php echo $auto_item['dostupnost']; ?></td>
+            <td><?php echo $rezervacka_item['idRezervacia']; ?></td>
+            <td><?php echo $rezervacka_item['datumAcas']; ?></td>
 
         </tr>
     <?php endforeach; ?>
@@ -48,22 +37,17 @@
 </table>
 
 <table class="table table-striped" align="center">
-    <?php foreach ($auto as $auto_item): ?>
+    <?php foreach ($rezervacka as $rezervacka_item): ?>
         <tr style="color: #0b0b0b; background: white;">
-        <td><?php echo $auto_item['idAuto']; ?></td>
-        <td><?php echo $auto_item['znacka']; ?></td>
-        <td><?php echo $auto_item['model']; ?></td>
-        <td><?php echo $auto_item['pocetMiest']; ?></td>
-        <td><?php echo $auto_item['SPZ']; ?></td>
-        <td><?php echo $auto_item['farba']; ?></td>
-        <td><?php echo $auto_item['dostupnost']; ?></td>
+        <td><?php echo $rezervacka_item['idRezervacia']; ?></td>
+        <td><?php echo $rezervacka_item['datumAcas']; ?></td>
         <td>
-        <a class="viewbutton" href="<?php echo site_url('vozidla/view/'.$auto_item['idAuto']); ?>">View </a>
+        <a class="viewbutton" href="<?php echo site_url('rezervacia/view/'.$rezervacka_item['idRezervacia']); ?>">View </a>
         <?php
         if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
-            <a class="editbutton" href="<?php echo site_url('vozidla/edit/'.$auto_item['idAuto']); ?>">Edit </a>
-            <a class="deletebutton" href="<?php echo site_url('vozidla/delete/'.$auto_item['idAuto']); ?>
-    "onclick="return confirm('Urcite chcete vymazat?')">Delete</a>
+            <a class="editbutton" href="<?php echo site_url('rezervacia/edit/'.$rezervacka_item['idRezervacia']); ?>">Edit </a>
+            <a class="deletebutton" href="<?php echo site_url('rezervacia/delete/'.$rezervacka_item['idRezervacia']); ?>
+    "onclick="return confirm('Are you sure you want to delete?')">Delete</a>
             </td>
             </tr>
         <?php endif; ?>
@@ -128,8 +112,8 @@
 <?php
 if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
     <div align="center">
-        <form action="<?php echo site_url('vozidla/insert/'); ?>">
-            <input type="submit" class="button" value="Pridaj vozidlo" />
+        <form action="<?php echo site_url('rezervacia/insert/'); ?>">
+            <input type="submit" class="button" value="CREATE RESERVATION" />
         </form>
     </div>
 <?php endif; ?>
@@ -141,11 +125,11 @@ if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-
 </body>
+
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
 
 <script type="text/javascript">$(document).ready(function () { $('#usertable').DataTable({
-        "ajax": {url : "<?php echo site_url("vozidla/vozidla_page")?>",type : 'GET'},
+        "ajax": {url : "<?php echo site_url("rezervacia/rezervacia_page")?>",type : 'GET'},
     });
     });</script>

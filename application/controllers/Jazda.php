@@ -134,7 +134,7 @@ class Jazda extends CI_Controller
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
 
-        $this->form_validation->set_rules('idJazda','','required');
+
         $this->form_validation->set_rules('idRezervacia','','required');
         $this->form_validation->set_rules('idTaxikar','','required');
         $this->form_validation->set_rules('idAuto','','required');
@@ -153,7 +153,6 @@ class Jazda extends CI_Controller
             $this->load->view('template/footer');
         } else {
             $data = array(
-                'idJazda' => $this->input->post('idVehicle'),
                 'idRezervacia' => $this->input->post('idDriver'),
                 'idTaxikar' => $this->input->post('idReservation'),
                 'idAuto' => $this->input->post('CustomerTelContact'),

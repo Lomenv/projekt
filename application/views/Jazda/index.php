@@ -136,7 +136,7 @@
 <?php
 if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
     <div align="center">
-        <form action="<?php echo site_url('rides/insert/'); ?>">
+        <form action="<?php echo site_url('jazda/insert/'); ?>">
             <input type="submit" class="button" value="ADD RIDE" />
         </form>
     </div>

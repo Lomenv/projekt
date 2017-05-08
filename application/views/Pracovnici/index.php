@@ -1,13 +1,16 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.css"/>
 
-<table id="usertable" style="width: 100%"  bgcolor="#f05f40" >
+<body class="container" id="podstranky">
+<br /> <br />
+
+<table id="usertable" style="width: 100%;  bgcolor=white;" >
 
     <thead>
     <style>
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
-
+            background: #faffff;
 
         }
         th, td {
@@ -55,7 +58,7 @@
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
 
-
+</body>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
 
 <script type="text/javascript">$(document).ready(function () { $('#usertable').DataTable({

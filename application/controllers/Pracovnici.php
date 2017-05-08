@@ -127,7 +127,7 @@ class Pracovnici extends CI_Controller
 
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
-        $this->form_validation->set_rules('idTaxikar','','required');
+
         $this->form_validation->set_rules('meno','','required');
         $this->form_validation->set_rules('priezvisko','','required');
         $this->form_validation->set_rules('telefon','P','required');

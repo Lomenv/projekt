@@ -37,6 +37,12 @@
                 <li>
                     <a href="<?php echo site_url('Jazda');?>">Jazdy</a>
                 </li>
+                <li>
+                    <a href="<?php echo site_url('Rezervacia');?>">Rezervácie</a>
+                </li>
+                <li>
+                    <a href="<?php echo site_url('Zmeny');?>">Zmeny</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
