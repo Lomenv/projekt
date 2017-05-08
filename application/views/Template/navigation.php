@@ -34,6 +34,9 @@
                 <li>
                     <a href="<?php echo site_url('Kontakt');?>">Kontakt</a>
                 </li>
+                <li>
+                    <a href="<?php echo site_url('Jazda');?>">Jazdy</a>
+                </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

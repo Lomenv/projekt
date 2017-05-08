@@ -119,7 +119,7 @@ class Pracovnici extends CI_Controller
     }
 
     public function  insert() {
-        $data['title'] = 'Add driver: ';
+        $data['title'] = 'Pridať taxikára:: ';
         $data['subtitle'] = '';
         $this->load->helper('form');
         $this->load->library('form_validation');
@@ -127,25 +127,30 @@ class Pracovnici extends CI_Controller
 
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
-        $this->form_validation->set_rules('FirstName','FirstName','required');
-        $this->form_validation->set_rules('LastName','LastName','required');
-        $this->form_validation->set_rules('PhoneContact','PhoneContact','required');
-        $this->form_validation->set_rules('HourlyWage','HourlyWage','required');
+        $this->form_validation->set_rules('idTaxikar','','required');
+        $this->form_validation->set_rules('meno','','required');
+        $this->form_validation->set_rules('priezvisko','','required');
+        $this->form_validation->set_rules('telefon','P','required');
+        $this->form_validation->set_rules('hodinovaMzda','','required');
+        $this->form_validation->set_rules('datumNarodenia','','required');
+        $this->form_validation->set_rules('cisloVodicskehoPreukazu','','required');
 
         if ($this->form_validation->run() == FALSE) {
 
             $this->load->view('template/header', $data);
             $this->load->view('template/navigation');
-            $this->load->view('drivers/create');
+            $this->load->view('pracovnici/create');
             $this->load->view('template/footer');
         } else {
             $data = array(
-                'FirstName' => $this->input->post('FirstName'),
-                'LastName' => $this->input->post('LastName'),
-                'PhoneContact' => $this->input->post('PhoneContact'),
-                'HourlyWage' => $this->input->post('HourlyWage')
+                'meno' => $this->input->post('meno'),
+                'priezvisko' => $this->input->post('priezvisko'),
+                'telefon' => $this->input->post('telefon'),
+                'hodinovaMzda' => $this->input->post('hodinovaMzda'),
+                'datumNarodenia' => $this->input->post('datumNarodenia'),
+                'cisloVodicskehoPreukazu' => $this->input->post('cisloVodicskehoPreukazu')
             );
-            $this->Drivers_model->insert_driver($data);
+            $this->Pracovnici_model->insert_taxikar($data);
             $data['message'] = 'Data Inserted Successfully';
 
             $this->load->view('template/header', $data);
