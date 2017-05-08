@@ -1,11 +1,4 @@
-<body id="podstranky">
 
-
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.css"/>
-
-
-
-<br /> <br /> <br /> <br /> <br /> <br /> <br />
 
 <table id="usertable" style="width: 100%"  bgcolor="#f05f40" >
 
@@ -22,14 +15,15 @@
             text-align: center;
         }
     </style>
+    <br /> <br /> <br />
     <tr>
-        <th>Cislo vozidla</th>
-        <th>Znacka</th>
+        <th>Číslo vozidla</th>
+        <th>Značka</th>
         <th>Model</th>
-        <th>Pocet miest</th>
-        <th>SPZ</th>
+        <th>Počet miest</th>
+        <th>SPŽ</th>
         <th>Farba</th>
-        <th>Dostupnost</th>
+        <th>Dostupnosť</th>
 
     </tr>
 
@@ -37,15 +31,15 @@
 
     <tbody>
 
-    <?php foreach ($vozidla as $vozidla_item): ?>
+    <?php foreach ($auto as $auto_item): ?>
         <tr style="color: #0b0b0b; background: white;">
-            <td><?php echo $vozidla_item['idAuto']; ?></td>
-            <td><?php echo $vozidla_item['znacka']; ?></td>
-            <td><?php echo $vozidla_item['model']; ?></td>
-            <td><?php echo $vozidla_item['SPZ']; ?></td>
-            <td><?php echo $vozidla_item['pocetMiest']; ?></td>
-            <td><?php echo $vozidla_item['farba']; ?></td>
-            <td><?php echo $vozidla_item['dostupnost']; ?></td>
+            <td><?php echo $auto_item['idAuto']; ?></td>
+            <td><?php echo $auto_item['znacka']; ?></td>
+            <td><?php echo $auto_item['model']; ?></td>
+            <td><?php echo $auto_item['pocetMiest']; ?></td>
+            <td><?php echo $auto_item['SPZ']; ?></td>
+            <td><?php echo $auto_item['farba']; ?></td>
+            <td><?php echo $auto_item['dostupnost']; ?></td>
 
         </tr>
     <?php endforeach; ?>
@@ -53,22 +47,22 @@
 </table>
 
 <table class="table table-striped" align="center">
-    <?php foreach ($vozidla as $vozidla_item): ?>
+    <?php foreach ($auto as $auto_item): ?>
         <tr style="color: #0b0b0b; background: white;">
-        <td><?php echo $vozidla_item['idAuto']; ?></td>
-        <td><?php echo $vozidla_item['znacka']; ?></td>
-        <td><?php echo $vozidla_item['model']; ?></td>
-        <td><?php echo $vozidla_item['pocetMiest']; ?></td>
-        <td><?php echo $vozidla_item['SPZ']; ?></td>
-        <td><?php echo $vozidla_item['farba']; ?></td>
-        <td><?php echo $vozidla_item['dostupnost']; ?></td>
+        <td><?php echo $auto_item['idAuto']; ?></td>
+        <td><?php echo $auto_item['znacka']; ?></td>
+        <td><?php echo $auto_item['model']; ?></td>
+        <td><?php echo $auto_item['pocetMiest']; ?></td>
+        <td><?php echo $auto_item['SPZ']; ?></td>
+        <td><?php echo $auto_item['farba']; ?></td>
+        <td><?php echo $auto_item['dostupnost']; ?></td>
         <td>
-        <a class="viewbutton" href="<?php echo site_url('vozidla/view/'.$vozidla_item['idAuto']); ?>">View </a>
+        <a class="viewbutton" href="<?php echo site_url('vozidla/view/'.$auto_item['idAuto']); ?>">View </a>
         <?php
         if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
-            <a class="editbutton" href="<?php echo site_url('vozidla/edit/'.$vozidla_item['idAuto']); ?>">Edit </a>
-            <a class="deletebutton" href="<?php echo site_url('vozidla/delete/'.$vozidla_item['idAuto']); ?>
-    "onclick="return confirm('Are you sure you want to delete?')">Delete</a>
+            <a class="editbutton" href="<?php echo site_url('vozidla/edit/'.$auto_item['idAuto']); ?>">Edit </a>
+            <a class="deletebutton" href="<?php echo site_url('vozidla/delete/'.$auto_item['idAuto']); ?>
+    "onclick="return confirm('Urcite chcete vymazat?')">Delete</a>
             </td>
             </tr>
         <?php endif; ?>
@@ -134,7 +128,7 @@
 if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
     <div align="center">
         <form action="<?php echo site_url('vozidla/insert/'); ?>">
-            <input type="submit" class="button" value="ADD VEHICLE" />
+            <input type="submit" class="button" value="Pridaj vozidlo" />
         </form>
     </div>
 <?php endif; ?>
@@ -148,13 +142,9 @@ if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
 
 
 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
 
 <script type="text/javascript">$(document).ready(function () { $('#usertable').DataTable({
         "ajax": {url : "<?php echo site_url("vozidla/vozidla_page")?>",type : 'GET'},
-
     });
     });</script>
-
-<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
-
-</body>

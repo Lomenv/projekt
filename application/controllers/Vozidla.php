@@ -13,31 +13,29 @@ class Vozidla extends CI_Controller
         $this->load->library('session');
     }
 
-
-
     public function index()
     {
 
-        $data['vozidla'] = $this->Vozidla_model->get_vozidla();
-        $data['title'] = 'Vozidla';
+        $data['auto'] = $this->Vozidla_model->get_vozidla();
+        $data['title'] = 'auto';
 
         $this->load->view('template/header', $data);
         $this->load->view('template/navigation');
         $this->load->view('vozidla/index', $data);
-
+        //$this->load->view('template/footer');
 
     }
 
     public function view($id = NULL) {
         $this->load->helper('form');
         $this->load->library('form_validation');
-        $data['vozidla_item'] = $this->Vozidla_model->get_vozidla($id);
+        $data['auto_item'] = $this->Vozidla_model->get_vozidla($id);
 
 
-        if (empty( $data['vozidla_item'])) { show_404(); }
+        if (empty( $data['auto_item'])) { show_404(); }
 
-        $data['title'] = $data['vozidla_item']['idVozidla'];
-        $data['subtitle'] = $data['vozidla_item']['znacka'] . ' ' .  $data['vozidla_item'] ['model'];
+        $data['title'] = $data['auto_item']['idAuto'];
+        $data['subtitle'] = $data['auto_item']['znacka'] . ' ' .  $data['auto_item'] ['model'];
         $this->load->view('template/header', $data);
         $this->load->view('template/navigation');
         $this->load->view('vozidla/view', $data);
@@ -51,7 +49,7 @@ class Vozidla extends CI_Controller
             show_404();
         }
 
-        $vozidla_item = $this->Vozidla_model->get_vozidla($id);
+        $auto_item = $this->Vozidla_model->get_vozidla($id);
         $this->Vozidla_model->delete_vozidla($id);
         redirect(base_url().'index.php/vozidla');
 
@@ -66,19 +64,20 @@ class Vozidla extends CI_Controller
         $this->load->library('form_validation');
 
 
-        $data['vozidla_item'] = $this->Vozidla_model->get_vozidla($id);
+        $data['auto_item'] = $this->Vozidla_model->get_vozidla($id);
 
-        $data['title'] = 'Edit vozidla: ';
-        $data['subtitle'] = $data['vozidla_item']['znacka'] . ' ' .  $data['vozidla_item'] ['model'];
+        $data['title'] = 'Uprav vozidlo: ';
+        $data['subtitle'] = $data['auto_item']['znacka'] . ' ' .  $data['auto_item'] ['model'];
 
 
-        $this->form_validation->set_rules('idAuto','','required');
+        $this->form_validation->set_rules('idAuto','Cislo auta','required');
         $this->form_validation->set_rules('znacka','','required');
-        $this->form_validation->set_rules('model','model','required');
-        $this->form_validation->set_rules('pocetMiest','pocetMiest','required');
+        $this->form_validation->set_rules('pocetMiest','Pocet miest','required');
+        $this->form_validation->set_rules('model','Model','required');
         $this->form_validation->set_rules('SPZ','SPZ','required');
-        $this->form_validation->set_rules('farba','farba','required');
-        $this->form_validation->set_rules('dostupnost','dostupnost','required');
+        $this->form_validation->set_rules('farba','Farba','required');
+        $this->form_validation->set_rules('dostupnost','Dostupnost','required');
+
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('template/header', $data);
@@ -95,7 +94,7 @@ class Vozidla extends CI_Controller
     }
 
     public function  insert() {
-        $data['title'] = 'Add vehicle: ';
+        $data['title'] = 'Pridaj vozidlo: ';
         $data['subtitle'] = '';
         $this->load->helper('form');
         $this->load->library('form_validation');
@@ -104,12 +103,11 @@ class Vozidla extends CI_Controller
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
         $this->form_validation->set_rules('znacka','','required');
-        $this->form_validation->set_rules('model','model','required');
-        $this->form_validation->set_rules('pocetMiest','pocetMiest','required');
+        $this->form_validation->set_rules('pocetMiest','Pocet miest','required');
+        $this->form_validation->set_rules('model','Model','required');
         $this->form_validation->set_rules('SPZ','SPZ','required');
-        $this->form_validation->set_rules('farba','farba','required');
-        $this->form_validation->set_rules('dostupnost','dostupnost','required');
-
+        $this->form_validation->set_rules('farba','Farba','required');
+        $this->form_validation->set_rules('dostupnost','Dostupnost','required');
 
         if ($this->form_validation->run() == FALSE) {
 
@@ -120,12 +118,14 @@ class Vozidla extends CI_Controller
         } else {
             $data = array(
                 'znacka' => $this->input->post('znacka'),
+                'pocetMiesst' => $this->input->post('pocetMiest'),
                 'model' => $this->input->post('model'),
                 'SPZ' => $this->input->post('SPZ'),
+                'farba' => $this->input->post('farba'),
                 'dostupnost' => $this->input->post('dostupnost')
             );
-            $this->Vozidla_model->insert_vozidla($data);
-            $data['message'] = 'Data Inserted Successfully';
+            $this->Vozidla_model->insert_auto($data);
+            $data['message'] = 'Udajte boli uspesne pridane';
 
             $this->load->view('template/header', $data);
             $this->load->view('template/navigation');
@@ -167,4 +167,3 @@ class Vozidla extends CI_Controller
 
 }
 ?>
-}

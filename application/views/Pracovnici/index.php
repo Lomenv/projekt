@@ -16,13 +16,13 @@
         }
     </style>
     <tr>
-        <th>Cislo taxikara</th>
+        <th>Poradové číslo</th>
         <th>Meno</th>
         <th>Priezvisko</th>
-        <th>Telefon</th>
-        <th>Hodinova Mzda</th>
+        <th>Telefón</th>
+        <th>Hodinová mzda</th>
         <th>Dátum narodenia</th>
-        <th>Cislo vodisckého preukazu</th>
+        <th>Číslo vodičského preukazu</th>
     </tr>
 
     </thead>
