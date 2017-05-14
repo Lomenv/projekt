@@ -6,7 +6,11 @@
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
-  background-image: url("../img/bg.jpg") ;
+  background: rgb(149,149,149); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(149,149,149,1) 0%, rgba(10,10,10,1) 57%, rgba(1,1,1,1) 58%, rgba(13,13,13,1) 62%, rgba(56,56,56,1) 87%, rgba(78,78,78,1) 92%, rgba(27,27,27,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(149,149,149,1) 0%,rgba(10,10,10,1) 57%,rgba(1,1,1,1) 58%,rgba(13,13,13,1) 62%,rgba(56,56,56,1) 87%,rgba(78,78,78,1) 92%,rgba(27,27,27,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(149,149,149,1) 0%,rgba(10,10,10,1) 57%,rgba(1,1,1,1) 58%,rgba(13,13,13,1) 62%,rgba(56,56,56,1) 87%,rgba(78,78,78,1) 92%,rgba(27,27,27,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
   margin-left: inherit;
   margin-right: inherit;
@@ -19,10 +23,16 @@ body {
 
 
 #podstranky {
-  background-image: url("../img/bg.jpg") ;
-  background-repeat: no-repeat;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#959595+0,0a0a0a+57,010101+58,0d0d0d+62,383838+87,4e4e4e+92,1b1b1b+100 */
+  background: rgb(149,149,149); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(149,149,149,1) 0%, rgba(10,10,10,1) 57%, rgba(1,1,1,1) 58%, rgba(13,13,13,1) 62%, rgba(56,56,56,1) 87%, rgba(78,78,78,1) 92%, rgba(27,27,27,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(149,149,149,1) 0%,rgba(10,10,10,1) 57%,rgba(1,1,1,1) 58%,rgba(13,13,13,1) 62%,rgba(56,56,56,1) 87%,rgba(78,78,78,1) 92%,rgba(27,27,27,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(149,149,149,1) 0%,rgba(10,10,10,1) 57%,rgba(1,1,1,1) 58%,rgba(13,13,13,1) 62%,rgba(56,56,56,1) 87%,rgba(78,78,78,1) 92%,rgba(27,27,27,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#959595', endColorstr='#1b1b1b',GradientType=0 ); /* IE6-9 */
+  background-repeat: repeat;
   margin-left: inherit;
   margin-right: inherit;
+
 }
 
 p {

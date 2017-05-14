@@ -17,7 +17,7 @@
         <style>
 
             dl {
-                width: 25%;
+                width: 35%;
                 overflow: hidden;
                 padding: 0;
                 margin: 0
@@ -46,26 +46,7 @@
 
 
         <?php foreach ($taxikar_item as $key => $value):?>
-            <?php
-            if ($value == 1): ?>
-                <img src="<?php echo base_url('assets/img/hasselhoff.png'); ?>" align="center">
-            <?php endif ?>
-            <?php
-            if ($value == 2): ?>
-                <img src="<?php echo base_url('assets/img/y2j.png'); ?>" align="center" style="width: 25%; height: 25%;">
-            <?php endif ?>
-            <?php
-            if ($value == 3): ?>
-                <img src="<?php echo base_url('assets/img/bruce.png'); ?>" align="center" style="width: 15%; height: 15%;">
-            <?php endif ?>
-            <?php
-            if ($value == 4): ?>
-                <img src="<?php echo base_url('assets/img/sylvester.png'); ?>" align="center" >
-            <?php endif ?>
-            <?php
-            if ($value == 5): ?>
-                <img src="<?php echo base_url('assets/img/strowman.png'); ?>" align="center" style="width: 20%; height: 20%;">
-            <?php endif ?>
+
 
             <dl>
 
