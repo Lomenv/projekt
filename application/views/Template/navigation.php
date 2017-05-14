@@ -43,6 +43,18 @@
                 <li>
                     <a href="<?php echo site_url('Zmeny');?>">Zmeny</a>
                 </li>
+                <?php
+                if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
+
+                    <li id="liright"><a href="<?php echo site_url('Pouzivatelia/konto'); ?>">Konto</a></li>
+                    <li id="liright"><a href="<?php echo site_url('Pouzivatelia/odhlasenie'); ?>">Odhlásenie</a></li>
+
+                    <?php
+                else:
+                    ?>
+                    <li id="liright"><a href="<?php echo site_url('Pouzivatelia/prihlasenie'); ?>">Prihlásenie</a></li>
+                    <li id="liright"><a href="<?php echo site_url('Pouzivatelia/registracia'); ?>">Registrácia</a></li>
+                <?php endif; ?>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
