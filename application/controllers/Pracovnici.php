@@ -22,7 +22,7 @@ class Pracovnici extends CI_Controller
         $this->load->view('template/header', $data);
         $this->load->view('template/navigation');
         $this->load->view('pracovnici/index', $data);
-        //$this->load->view('template/footer');
+        $this->load->view('template/footer');
 
     }
 
@@ -139,7 +139,7 @@ class Pracovnici extends CI_Controller
 
             $this->load->view('template/header', $data);
             $this->load->view('template/navigation');
-            $this->load->view('pracovnici/create');
+            $this->load->view('pracovnici/insert');
             $this->load->view('template/footer');
         } else {
             $data = array(

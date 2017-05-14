@@ -6,6 +6,10 @@
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   overflow-x: hidden;
+  background-image: url("../img/bg.jpg") ;
+  background-repeat: no-repeat;
+  margin-left: inherit;
+  margin-right: inherit;
 }
 
 #hlavna {

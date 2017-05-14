@@ -69,7 +69,7 @@
         <a class="viewbutton" href="<?php echo site_url('jazda/view/'.$jazda_item['idJazda']); ?>">View </a>
         <?php
         if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
-            <a class="editbutton" href="<?php echo site_url('jazda/edit/'.jazda_item['idJazda']); ?>">Edit </a>
+            <a class="editbutton" href="<?php echo site_url('jazda/edit/'.$jazda_item['idJazda']); ?>">Edit </a>
             <a class="deletebutton" href="<?php echo site_url('jazda/delete/'.$jazda_item['idJazda']); ?>
     "onclick="return confirm('Are you sure you want to delete?')">Delete</a>
             </td>
@@ -137,7 +137,7 @@
 if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
     <div align="center">
         <form action="<?php echo site_url('jazda/insert/'); ?>">
-            <input type="submit" class="button" value="ADD RIDE" />
+            <input type="submit" class="button" value="Pridať jazdu" />
         </form>
     </div>
 <?php endif; ?>

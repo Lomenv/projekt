@@ -124,7 +124,7 @@ class Rezervacia extends CI_Controller
 
             $this->load->view('template/header', $data);
             $this->load->view('template/navigation');
-            $this->load->view('rezervacia/create');
+            $this->load->view('rezervacia/insert');
             $this->load->view('template/footer');
         } else {
             $data = array(

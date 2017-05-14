@@ -103,7 +103,7 @@ class Pouzivatelia extends CI_Controller {
         $this->session->unset_userdata('isUserLoggedIn');
         $this->session->unset_userdata('userId');
         $this->session->sess_destroy();
-        redirect('pouzivatelia/prihlasenie');
+        redirect('home');
     }
 
 

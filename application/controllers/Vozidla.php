@@ -113,7 +113,7 @@ class Vozidla extends CI_Controller
 
             $this->load->view('template/header', $data);
             $this->load->view('template/navigation');
-            $this->load->view('vozidla/create');
+            $this->load->view('vozidla/insert');
             $this->load->view('template/footer');
         } else {
             $data = array(

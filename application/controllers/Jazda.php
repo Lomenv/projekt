@@ -149,7 +149,7 @@ class Jazda extends CI_Controller
 
             $this->load->view('template/header', $data);
             $this->load->view('template/navigation');
-            $this->load->view('jazda/create');
+            $this->load->view('jazda/insert');
             $this->load->view('template/footer');
         } else {
             $data = array(
