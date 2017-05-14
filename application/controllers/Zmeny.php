@@ -31,7 +31,7 @@ class Zmeny extends CI_Controller
         $this->load->helper('form');
         $this->load->library('form_validation');
         $data['zmenaprac_item'] = $this->Zmena_model->get_zmenyprac($id);
-        $data['zmena'] = $this->Zmena_model->get_zema();
+        $data['zmena'] = $this->Zmena_model->get_zmena();
         $data['taxikar'] = $this->Zmena_model->get_taxikar();
         $data['taxikar_item'] = $this->Zmena_model->get_taxikar();
         $data['zmena_item'] = $this->Zmena_model->get_zmena();

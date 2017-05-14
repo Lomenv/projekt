@@ -120,7 +120,7 @@
 if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
     <div align="center">
         <form action="<?php echo site_url('zmeny/insert/'); ?>">
-            <input type="submit" class="button" value="ADD WORKDAY" />
+            <input type="submit" class="button" value="Vložiť zmenu" />
         </form>
     </div>
 <?php endif; ?>

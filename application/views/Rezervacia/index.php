@@ -113,7 +113,7 @@
 if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
     <div align="center">
         <form action="<?php echo site_url('rezervacia/insert/'); ?>">
-            <input type="submit" class="button" value="CREATE RESERVATION" />
+            <input type="submit" class="button" value="Vytvoriť rezerváciu" />
         </form>
     </div>
 <?php endif; ?>
