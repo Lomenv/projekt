@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<head>
+<head id="podstranky">
     <br /> <br /> <br />
-    <h1> Najdrahšie jazdy </h1>
+<h1>Najdrahšie jazdy</h1>
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -43,6 +43,7 @@
         h1 {
             text-align: center;
             color:#00FFFF;
+
         }
     </style>
 
@@ -88,7 +89,7 @@
 </head>
 
 
-<body>
+<body style=" background-color: rgba(0, 0, 0, 0.5);">
 
 <div id="chart_div" align="center" style="background-color: rgba(0, 0, 0, 0.5); color: white;"></div>
 <h1> Autá a ich počet miest</h1>

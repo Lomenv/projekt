@@ -16,7 +16,7 @@
             text-align: center;
         }
     </style>
-    <br /> <br /> <br />
+    <br/>
     <tr>
         <th>Číslo vozidla</th>
         <th>Značka</th>
@@ -74,7 +74,7 @@
 
 <style>
     .button {
-        background-color: #f05f40;
+        background-color: cornflowerblue;
         border: none;
         color: white;
         padding: 15px 32px;
@@ -87,7 +87,7 @@
     }
 
     .deletebutton {
-        background-color: red;
+        background-color: darkmagenta;
         border: none;
         color: white;
         padding: 15px 32px;
@@ -99,7 +99,7 @@
         cursor: pointer;
     }
     .editbutton {
-        background-color: green;
+        background-color: cyan;
         border: none;
         color: white;
         padding: 15px 32px;
@@ -111,7 +111,7 @@
         cursor: pointer;
     }
     .viewbutton {
-        background-color: blue;
+        background-color: yellowgreen;
         border: none;
         color: white;
         padding: 15px 32px;

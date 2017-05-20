@@ -64,7 +64,7 @@ class Pouzivatelia extends CI_Controller {
     }
 
 
-    public function registracia()
+    public function registraciadf56g4df64gfd64g6df4g6d4g6df4g()
     {
         $data = array();
         $userData = array();

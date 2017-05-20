@@ -43,9 +43,24 @@
 
 
         <?php foreach ($auto_item as $key => $value):?>
-
+            <?php  if (($value == 1)&&($key=='idAuto')): ?>
+                <img src="<?php echo base_url('assets/img/transporter.png'); ?>" align="center" style="width: 35%; height: 30%;">
+            <?php endif ?>
+            <?php  if (($value == 2)&&($key=='idAuto')): ?>
+                <img src="<?php echo base_url('assets/img/a5.png'); ?>" align="center" style="width: 30%; height: 30%;">
+            <?php endif ?>
+            <?php  if (($value == 3)&&($key=='idAuto')): ?>
+                <img src="<?php echo base_url('assets/img/vectra.png'); ?>" align="center" style="width: 25%; height: 35%;">
+            <?php endif ?>
+            <?php  if (($value == 4)&&($key=='idAuto')): ?>
+                <img src="<?php echo base_url('assets/img/407.png'); ?>" align="center" style="width: 35%; height: 30%;">
+            <?php endif ?>
+            <?php  if (($value == 5)&&($key=='idAuto')): ?>
+                <img src="<?php echo base_url('assets/img/c4.png'); ?>" align="center" style="width: 35%; height: 30%;">
+            <?php endif ?>
 
             <dl>
+
 
                 <dt ><?php echo $key;?> →</dt>
                 <dd ><?php echo $value;?></dd>

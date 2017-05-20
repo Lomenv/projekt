@@ -57,7 +57,7 @@
                 else:
                     ?>
                     <li id="liright"><a href="<?php echo site_url('Pouzivatelia/prihlasenie'); ?>">Prihlásenie</a></li>
-                    <li id="liright"><a href="<?php echo site_url('Pouzivatelia/registracia'); ?>">Registrácia</a></li>
+
                 <?php endif; ?>
             </ul>
         </div>
@@ -74,7 +74,7 @@
     }
 </style>
 
-<br /> <br /> <br />  <br />
+<br /> <br /> <br />  <br /> <br /> <br />
 
 
 

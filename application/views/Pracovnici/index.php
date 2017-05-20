@@ -48,7 +48,7 @@
 </table>
 
 
-<table class="table table-striped" align="center">
+<table  align="center">
     <?php foreach ($taxikar as $taxikar_item): ?>
         <tr style="color: #0b0b0b; background: white;">
         <td><?php echo $taxikar_item['idTaxikar']; ?></td>
@@ -75,7 +75,7 @@
 
 <style>
     .button {
-        background-color: #f05f40;
+        background-color: cornflowerblue;
         border: none;
         color: white;
         padding: 15px 32px;
@@ -88,7 +88,7 @@
     }
 
     .deletebutton {
-        background-color: red;
+        background-color: darkmagenta;
         border: none;
         color: white;
         padding: 15px 32px;
@@ -100,7 +100,7 @@
         cursor: pointer;
     }
     .editbutton {
-        background-color: green;
+        background-color: cyan;
         border: none;
         color: white;
         padding: 15px 32px;
@@ -112,7 +112,7 @@
         cursor: pointer;
     }
     .viewbutton {
-        background-color: blue;
+        background-color: yellowgreen;
         border: none;
         color: white;
         padding: 15px 32px;
