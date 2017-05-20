@@ -1,3 +1,3 @@
-<body id="podstranky">
+<body >
 
 </body>

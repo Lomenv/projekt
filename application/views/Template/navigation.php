@@ -43,6 +43,10 @@
                 <li>
                     <a href="<?php echo site_url('Zmeny');?>">Zmeny</a>
                 </li>
+                </li>
+                <li>
+                    <a href="<?php echo site_url('Graf');?>">Grafy</a>
+                </li>
                 <?php
                 if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
 
