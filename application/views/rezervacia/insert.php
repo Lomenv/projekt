@@ -1,13 +1,14 @@
 <html>
 
-<body>
+<body id="podstranky">
 
-<div id="container" align="center" style="color: white;">
+<div align="center" style="color: white;">
     <?php echo form_open('Rezervacia/insert'); ?>
+    <br/>
     <h1>Vytvoriť rezerváciu:</h1><hr/>
     <table>
 
-        <td>Dátum a čas rezervácie: </td>
+        <td style="color: white">Dátum a čas rezervácie: </td>
         <td><input type="datetime" name="datumAcas" placeholder="rr-mm-dd hh-mm-ss"></input></td>
         </tr>
         <tr>

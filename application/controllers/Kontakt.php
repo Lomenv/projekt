@@ -22,7 +22,7 @@ class Kontakt extends CI_Controller {
     {
         $this->load->view('template/header');
         $this->load->view('template/navigation');
-        $this->load->view('Kontakt/index.php');
+        $this->load->view('kontakt/index.php');
         $this->load->view('template/footer');
     }
 }

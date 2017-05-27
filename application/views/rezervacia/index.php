@@ -1,6 +1,4 @@
-
-
-<body id="podstranky">
+<body class="container" id="podstranky">
 <br /> <br />
 
 <table id="usertable" style="width: 100%;  bgcolor=white;" >
@@ -19,52 +17,37 @@
         }
     </style>
     <tr>
-        <th>Poradové číslo</th>
-        <th>Meno</th>
-        <th>Priezvisko</th>
-        <th>Telefón</th>
-        <th>Hodinová mzda</th>
-        <th>Dátum narodenia</th>
-        <th>Číslo vodičského preukazu</th>
+        <th>Číslo rezervácie</th>
+        <th>Dátum a čas</th>
+
     </tr>
 
     </thead>
 
     <tbody>
 
-    <?php foreach ($taxikar as $taxikar_item): ?>
+    <?php foreach ($rezervacka as $rezervacka_item): ?>
         <tr style="color: #0b0b0b; background: white;">
-            <td><?php echo $taxikar_item['idTaxikar']; ?></td>
-            <td><?php echo $taxikar_item['meno']; ?></td>
-            <td><?php echo $taxikar_item['priezvisko']; ?></td>
-            <td><?php echo $taxikar_item['telefon']; ?></td>
-            <td><?php echo $taxikar_item['hodinovaMzda']; ?></td>
-            <td><?php echo $taxikar_item['datumNarodenia']; ?></td>
-            <td><?php echo $taxikar_item['cisloVodicskehoPreukazu']; ?> </td>
+            <td><?php echo $rezervacka_item['idRezervacia']; ?></td>
+            <td><?php echo $rezervacka_item['datumAcas']; ?></td>
 
         </tr>
     <?php endforeach; ?>
     </tbody>
 </table>
 
-
-<table  align="center">
-    <?php foreach ($taxikar as $taxikar_item): ?>
+<table class="table table-striped" align="center">
+    <?php foreach ($rezervacka as $rezervacka_item): ?>
         <tr style="color: #0b0b0b; background: white;">
-        <td><?php echo $taxikar_item['idTaxikar']; ?></td>
-        <td><?php echo $taxikar_item['meno']; ?></td>
-        <td><?php echo $taxikar_item['priezvisko']; ?></td>
-        <td><?php echo $taxikar_item['telefon']; ?></td>
-        <td><?php echo $taxikar_item['hodinovaMzda']; ?></td>
-        <td><?php echo $taxikar_item['datumNarodenia']; ?></td>
-        <td><?php echo $taxikar_item['cisloVodicskehoPreukazu']; ?> </td>
+        <td><?php echo $rezervacka_item['idRezervacia']; ?></td>
+        <td><?php echo $rezervacka_item['datumAcas']; ?></td>
         <td>
-        <a class="viewbutton" href="<?php echo site_url('pracovnici/view/'.$taxikar_item['idTaxikar']); ?>">View </a>
+        <a class="viewbutton" href="<?php echo site_url('rezervacia/view/'.$rezervacka_item['idRezervacia']); ?>">Zmeniť </a>
         <?php
         if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
-            <a class="editbutton" href="<?php echo site_url('pracovnici/edit/'.$taxikar_item['idTaxikar']); ?>">Edit </a>
-            <a class="deletebutton" href="<?php echo site_url('pracovnici/delete/'.$taxikar_item['idTaxikar']); ?>
-    "onclick="return confirm('Are you sure you want to delete?')">Delete</a>
+            <a class="editbutton" href="<?php echo site_url('rezervacia/edit/'.$rezervacka_item['idRezervacia']); ?>">Editovať </a>
+            <a class="deletebutton" href="<?php echo site_url('rezervacia/delete/'.$rezervacka_item['idRezervacia']); ?>
+    "onclick="return confirm('Are you sure you want to delete?')">Vymazať</a>
             </td>
             </tr>
         <?php endif; ?>
@@ -129,8 +112,8 @@
 <?php
 if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
     <div align="center">
-        <form action="<?php echo site_url('pracovnici/insert/'); ?>">
-            <input type="submit" class="button" value="Pridať pracovníka" />
+        <form action="<?php echo site_url('rezervacia/insert/'); ?>">
+            <input type="submit" class="button" value="Vytvoriť rezerváciu" />
         </form>
     </div>
 <?php endif; ?>
@@ -142,11 +125,11 @@ if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 
-
 </body>
+
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
 
 <script type="text/javascript">$(document).ready(function () { $('#usertable').DataTable({
-        "ajax": {url : "<?php echo site_url("pracovnici/taxikar_page")?>",type : 'GET'},
+        "ajax": {url : "<?php echo site_url("rezervacia/rezervacia_page")?>",type : 'GET'},
     });
     });</script>

@@ -1,8 +1,9 @@
 <html>
 
-<body >
-<h1 align="center" style="color: white;">Add Driver:</h1><hr/>
-<div id="container" align="center" style="color: white;">
+<body id="podstranky">
+<br />
+<h1 align="center" style="color: white;">Pridať taxikára:</h1><hr/>
+<div align="center" style="color: white;">
     <?php echo form_open('pracovnici/insert'); ?>
 
     <table style="color: white">
@@ -28,11 +29,11 @@
         </tr>
         <tr>
             <td>Číslo vodičského preukazu :</td>
-            <td style="color: black;"><input type="number" step=any name="cisloVodicskehoPreukazu"></input></td>
+            <td style="color: black;"><input type="text" maxlength="6" step=any name="cisloVodicskehoPreukazu"></input></td>
         </tr>
         <tr>
             <br />
-            <td style="color: black;"><input type="submit" name="submit"  value="submit" style="margin-left: 155px"></input></td>
+            <td style="color: black;"><input type="submit" name="submit"  value="Potrvdiť" style="margin-left: 155px"></input></td>
         </tr>
     </table>
     <?php

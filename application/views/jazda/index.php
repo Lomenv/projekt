@@ -1,14 +1,14 @@
 <body class="container" id="podstranky">
 <br /> <br />
-
 <table id="usertable" style="width: 100%;  bgcolor=white;" >
-
+<span style="color: black;">
     <thead>
     <style>
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
             background: #faffff;
+
 
         }
         th, td {
@@ -17,8 +17,16 @@
         }
     </style>
     <tr>
-        <th>Číslo rezervácie</th>
-        <th>Dátum a čas</th>
+        <th>Čislo jazdy</th>
+        <th>Čislo rezervácie</th>
+        <th>Čislo taxikára</th>
+        <th>Čislo auta</th>
+        <th>Tel. kontakt na zákzníka</th>
+        <th>Cena</th>
+        <th>Začiatok</th>
+        <th>Koniec</th>
+        <th>Typ</th>
+        <th>Dlžka cesty</th>
 
     </tr>
 
@@ -26,10 +34,18 @@
 
     <tbody>
 
-    <?php foreach ($rezervacka as $rezervacka_item): ?>
+    <?php foreach ($jazda as $jazda_item): ?>
         <tr style="color: #0b0b0b; background: white;">
-            <td><?php echo $rezervacka_item['idRezervacia']; ?></td>
-            <td><?php echo $rezervacka_item['datumAcas']; ?></td>
+            <td><?php echo $jazda_item['idJazda']; ?></td>
+            <td><?php echo $jazda_item['idRezervacia']; ?></td>
+            <td><?php echo $jazda_item['idTaxikar']; ?></td>
+            <td><?php echo $jazda_item['idAuto']; ?></td>
+            <td><?php echo $jazda_item['telefonNaZakaznika']; ?> </td>
+            <td><?php echo $jazda_item['cena']; ?> </td>
+            <td><?php echo $jazda_item['zaciatok']; ?> </td>
+            <td><?php echo $jazda_item['koniec']; ?> </td>
+            <td><?php echo $jazda_item['typ']; ?> </td>
+            <td><?php echo $jazda_item['dlzkaCesty']; ?> </td>
 
         </tr>
     <?php endforeach; ?>
@@ -37,17 +53,25 @@
 </table>
 
 <table class="table table-striped" align="center">
-    <?php foreach ($rezervacka as $rezervacka_item): ?>
+    <?php foreach ($jazda as $jazda_item): ?>
         <tr style="color: #0b0b0b; background: white;">
-        <td><?php echo $rezervacka_item['idRezervacia']; ?></td>
-        <td><?php echo $rezervacka_item['datumAcas']; ?></td>
+        <td><?php echo $jazda_item['idJazda']; ?></td>
+        <td><?php echo $jazda_item['idRezervacia']; ?></td>
+        <td><?php echo $jazda_item['idTaxikar']; ?></td>
+        <td><?php echo $jazda_item['idAuto']; ?></td>
+        <td><?php echo $jazda_item['telefonNaZakaznika']; ?> </td>
+        <td><?php echo $jazda_item['cena']; ?> </td>
+        <td><?php echo $jazda_item['zaciatok']; ?> </td>
+        <td><?php echo $jazda_item['koniec']; ?> </td>
+        <td><?php echo $jazda_item['typ']; ?> </td>
+        <td><?php echo $jazda_item['dlzkaCesty']; ?> </td>
         <td>
-        <a class="viewbutton" href="<?php echo site_url('rezervacia/view/'.$rezervacka_item['idRezervacia']); ?>">View </a>
+        <a class="viewbutton" href="<?php echo site_url('jazda/view/'.$jazda_item['idJazda']); ?>">Pozrieť </a>
         <?php
         if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
-            <a class="editbutton" href="<?php echo site_url('rezervacia/edit/'.$rezervacka_item['idRezervacia']); ?>">Edit </a>
-            <a class="deletebutton" href="<?php echo site_url('rezervacia/delete/'.$rezervacka_item['idRezervacia']); ?>
-    "onclick="return confirm('Are you sure you want to delete?')">Delete</a>
+            <a class="editbutton" href="<?php echo site_url('jazda/edit/'.$jazda_item['idJazda']); ?>">Editovať </a>
+            <a class="deletebutton" href="<?php echo site_url('jazda/delete/'.$jazda_item['idJazda']); ?>
+    "onclick="return confirm('Are you sure you want to delete?')">Vymazať</a>
             </td>
             </tr>
         <?php endif; ?>
@@ -55,7 +79,6 @@
 </table>
 
 <br /> <br /> <br />
-
 <style>
     .button {
         background-color: cornflowerblue;
@@ -109,14 +132,16 @@
 
 
 </style>
+</span>
 <?php
 if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
     <div align="center">
-        <form action="<?php echo site_url('rezervacia/insert/'); ?>">
-            <input type="submit" class="button" value="Vytvoriť rezerváciu" />
+        <form action="<?php echo site_url('jazda/insert/'); ?>">
+            <input type="submit" class="button" value="Pridať jazdu" />
         </form>
     </div>
 <?php endif; ?>
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -130,6 +155,6 @@ if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
 
 <script type="text/javascript">$(document).ready(function () { $('#usertable').DataTable({
-        "ajax": {url : "<?php echo site_url("rezervacia/rezervacia_page")?>",type : 'GET'},
+        "ajax": {url : "<?php echo site_url("jazda/jazda_page")?>",type : 'GET'},
     });
     });</script>

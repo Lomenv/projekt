@@ -1,15 +1,15 @@
 <html>
 
-<body>
-
-<div id="container" align="center" style="color: white;">
+<body id="podstranky">
+<br />
+<div align="center" style="color: white;">
     <?php echo form_open('Zmeny/insert'); ?>
     <h1>Pridaj zmenu:</h1><hr/>
     <table style="color: white">
 
         <tr>
             <?php
-            $con=mysqli_connect("localhost","root","","taxi");
+            $con=mysqli_connect("localhost","c1vlomen17","C3A74XkS8c9a","c1vlomen17");
             $getMinZmena=mysqli_fetch_assoc(mysqli_query($con,"SELECT MIN(idZmena) AS minsh FROM zmena"));
             $getMaxZmena=mysqli_fetch_assoc(mysqli_query($con,"SELECT MAX(idZmena) AS maxsh FROM zmena"));
             $row3 =  $getMinZmena['minsh'];

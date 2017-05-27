@@ -6,8 +6,9 @@
 
 <body id="hlavna">
 <p align="center" style="color: white">
-
-    Vitajte na našej stránke! <br/>
+<br/>
+    Vitajte na našej stránke. <br/>
+    Sme radi že využívate naše služby!
 
 
 </p>

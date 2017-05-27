@@ -58,12 +58,12 @@
         <td><?php echo $auto_item['farba']; ?></td>
         <td><?php echo $auto_item['dostupnost']; ?></td>
         <td>
-        <a class="viewbutton" href="<?php echo site_url('vozidla/view/'.$auto_item['idAuto']); ?>">View </a>
+        <a class="viewbutton" href="<?php echo site_url('vozidla/view/'.$auto_item['idAuto']); ?>">Pozrieť </a>
         <?php
         if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
-            <a class="editbutton" href="<?php echo site_url('vozidla/edit/'.$auto_item['idAuto']); ?>">Edit </a>
+            <a class="editbutton" href="<?php echo site_url('vozidla/edit/'.$auto_item['idAuto']); ?>">Editovať </a>
             <a class="deletebutton" href="<?php echo site_url('vozidla/delete/'.$auto_item['idAuto']); ?>
-    "onclick="return confirm('Urcite chcete vymazat?')">Delete</a>
+    "onclick="return confirm('Urcite chcete vymazat?')">Vymazať</a>
             </td>
             </tr>
         <?php endif; ?>

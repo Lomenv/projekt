@@ -22,7 +22,7 @@ class Graf extends CI_Controller
     {
         $this->load->view('template/header.php');
         $this->load->view('template/navigation.php');
-        $this->load->view('Grafy/graf.php');
+        $this->load->view('grafy/graf.php');
     }
 
     public

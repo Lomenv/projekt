@@ -1,10 +1,10 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 ?>
-
-<div class="container"  style="background-color:#333333" align="center">
+<body id="podstranky">
+<div  style="color: white;" align="center">
     <div class="row" style="color: white">
         <div class="page-header">
-            <h1><?php echo $title; ?><small> <?php echo $subtitle;?></small></h1>
+            <h1><?php echo $title; ?></h1>
         </div>
     </div>
 
@@ -14,12 +14,12 @@
             <?php if (validation_errors()): ?>
                 <div class="alert alert-danger alert-dismissable" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">x</span></button>
-                    <strong>Warning!</strong> <?php echo validation_errors(); ?>
+                    <strong>Pozor!</strong> <?php echo validation_errors(); ?>
                 </div>
             <?php endif;
-            echo form_open('Vozidla/edit/'.$auto_item['idAuto'],array('class'=>'form-horizontal')); ?>
+            echo form_open('Rezervacia/edit/'.$rezervacka_item['idRezervacia'],array('class'=>'form-horizontal')); ?>
             <div class="form-group">
-                <?php foreach ($auto_item as $key => $value):?>
+                <?php foreach ($rezervacka_item as $key => $value):?>
                     <div class="form-group">
                         <label for="<?php echo $key; ?>" class="col-sm-2 control-label"><?php echo $key;?></label>
                         <div class="col-sm-10">
@@ -38,12 +38,13 @@
 
 
 
+
     <div class="col-md-4">
         <button type="button" class="btn btn-default" onclick="javascript:window.history.go(-1);">Naspäť</button>
     </div>
-</div>
+</div>    <!-- /row -->
 <div class="row">
 
 </div>
-
-</div>
+</body>
+</div> <!-- /container -->

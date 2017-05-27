@@ -22,7 +22,7 @@ class Onas extends CI_Controller {
     {
         $this->load->view('template/header');
         $this->load->view('template/navigation');
-        $this->load->view('Onas/index.php');
+        $this->load->view('onas/index.php');
         $this->load->view('template/footer');
     }
 }

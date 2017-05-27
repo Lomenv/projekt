@@ -2,15 +2,15 @@
 <br />
 
 <body id="podstranky">
-
-<div id="container" align="center" style="color: white;">
+<br />
+<div align="center" style="color: white;">
     <?php echo form_open('jazda/insert'); ?>
     <h1>Pridať jazdu:</h1><hr/>
     <table style="color: white;">
         <tr>
             <td>Číslo auta :</td>
             <?php
-            $con=mysqli_connect("localhost","root","","taxi");
+            $con=mysqli_connect("localhost","c1vlomen17","C3A74XkS8c9a","c1vlomen17");
             $getMinAuto=mysqli_fetch_assoc(mysqli_query($con,"SELECT MIN(idAuto) AS minauto FROM auto"));
             $getMaxAuto=mysqli_fetch_assoc(mysqli_query($con,"SELECT MAX(idAuto) AS maxauto FROM auto"));
             $row1 =  $getMinAuto['minauto'];

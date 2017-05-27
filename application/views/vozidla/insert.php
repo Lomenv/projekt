@@ -1,8 +1,8 @@
 <html>
 
-<body>
-
-<div id="container" align="center" style="color: white;">
+<body id="podstranky">
+<br />
+<div align="center" style="color: white;">
     <?php echo form_open('Vozidla/insert'); ?>
     <h1>Pridaj vozidlo:</h1><hr/>
     <table style="color:white;">
