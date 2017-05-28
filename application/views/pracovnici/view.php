@@ -47,6 +47,22 @@
 
         <?php foreach ($taxikar_item as $key => $value):?>
 
+            <?php  if (($value == 1)&&($key=='idTaxikar')): ?>
+                <img src="<?php echo base_url('assets/img/1.jpg'); ?>" align="center" style="width: 15%; height: 25%;">
+            <?php endif ?>
+
+            <?php  if (($value == 2)&&($key=='idTaxikar')): ?>
+                <img src="<?php echo base_url('assets/img/2.jpg'); ?>" align="center" style="width: 20%; height: 20%;">
+            <?php endif ?>
+
+            <?php  if (($value == 3)&&($key=='idTaxikar')): ?>
+                <img src="<?php echo base_url('assets/img/3.jpg'); ?>" align="center" style="width: 20%; height: 30%;">
+            <?php endif ?>
+
+            <?php  if (($value == 4)&&($key=='idTaxikar')): ?>
+                <img src="<?php echo base_url('assets/img/4.jpg'); ?>" align="center" style="width: 20%; height: 30%;">
+            <?php endif ?>
+
 
             <dl>
 

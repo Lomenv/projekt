@@ -42,7 +42,7 @@
         <td><?php echo $rezervacka_item['idRezervacia']; ?></td>
         <td><?php echo $rezervacka_item['datumAcas']; ?></td>
         <td>
-        <a class="viewbutton" href="<?php echo site_url('rezervacia/view/'.$rezervacka_item['idRezervacia']); ?>">Zmeniť </a>
+        <a class="viewbutton" href="<?php echo site_url('rezervacia/view/'.$rezervacka_item['idRezervacia']); ?>">Pozrieť</a>
         <?php
         if (isset($_SESSION['userId']) and $_SESSION['userId']!=''): ?>
             <a class="editbutton" href="<?php echo site_url('rezervacia/edit/'.$rezervacka_item['idRezervacia']); ?>">Editovať </a>
