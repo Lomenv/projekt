@@ -16,4 +16,11 @@ class Graf_model extends CI_Model
         return $this->db->get('auto')->result();
     }
 
+    public function get_vek() {
+        $this->db->select('SUBSTRING(datumNarodenia,1,4) AS datum, meno, priezvisko');
+        $this->db->from('taxikar');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
 }

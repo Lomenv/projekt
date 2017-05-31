@@ -6,11 +6,12 @@
 
 <body id="hlavna">
 <p align="center" style="color: white">
-<br/>
+
+<br />
     Vitajte na našej stránke. <br/>
     Sme radi že využívate naše služby!
-
-
+    <br />
+<img src="<?php echo base_url('assets/img/home.jpg'); ?>" height="55%"; width="55%" align="center">
 </p>
 
 

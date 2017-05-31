@@ -82,7 +82,39 @@
 
     </script>
 
+    <script type="text/javascript">
 
+
+        google.charts.load('current', {'packages':['corechart']});
+
+
+        google.charts.setOnLoadCallback(drawChart3);
+
+        function drawChart3() {
+            var jsonData = $.ajax({
+                url: "<?php echo base_url() . 'index.php/Graf/getdata3' ?>",
+                dataType: "json",
+                async: false
+            }).responseText;
+
+
+            var data = new google.visualization.DataTable(jsonData);
+            var options = {
+                width: 900, height: 500,
+                backgroundColor: "transparent",
+                legend: {textStyle: {color: 'white'}},
+                series: {textStyle: {color: 'white'} },
+                series: { 0: { color: '00FFFF', pointSize: 5, lineWidth: 4 }},
+                hAxis: {textStyle: {color: 'white'}},
+                vAxis: {textStyle: {color: 'white'}}
+            }
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('chart_div3'));
+
+            chart.draw(data, options);
+        }
+
+    </script>
 
 
 
@@ -96,5 +128,10 @@
 <br />
 <div style="background-color: rgba(0, 0, 0, 0.5); color: white;">
     <div id="chart_div2" align="center" ></div>
+</div>
+<h1> Rok narodenia taxikárov </h1>
+<br />
+<div style="background-color: rgba(0, 0, 0, 0.5); color: white;">
+    <div id="chart_div3" align="center" ></div>
 </div>
 </body>

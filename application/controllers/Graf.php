@@ -25,9 +25,7 @@ class Graf extends CI_Controller
         $this->load->view('grafy/graf.php');
     }
 
-    public
-
-    function getdata()
+    public function getdata()
     {
         $response = "";
         $data = $this->Graf_model->get_jazdy();
@@ -101,4 +99,42 @@ class Graf extends CI_Controller
 
         echo json_encode($response);
     }
+
+    public function getdata3()
+    {
+        $response = "";
+        $data = $this->Graf_model->get_vek();
+
+
+        //         //data to json
+
+        $response->cols[] = array(
+            "id" => "",
+            "label" => "Meno a priezvisko",
+            "pattern" => "",
+            "type" => "string"
+        );
+        $response->cols[] = array(
+            "id" => "",
+            "label" => "Rok narodenia",
+            "pattern" => "",
+            "type" => "number"
+        );
+        foreach($data as $cd)
+        {
+            $response->rows[]["c"] = array(
+                array(
+                    "v" => "$cd->meno" . " " . "$cd->priezvisko",
+                    "f" => null
+                ) ,
+                array(
+                    "v" => (int)$cd->datum,
+                    "f" => null
+                )
+            );
+        }
+
+        echo json_encode($response);
+    }
+
 }

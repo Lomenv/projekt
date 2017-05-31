@@ -118,7 +118,7 @@ class Vozidla extends CI_Controller
         } else {
             $data = array(
                 'znacka' => $this->input->post('znacka'),
-                'pocetMiesst' => $this->input->post('pocetMiest'),
+                'pocetMiest' => $this->input->post('pocetMiest'),
                 'model' => $this->input->post('model'),
                 'SPZ' => $this->input->post('SPZ'),
                 'farba' => $this->input->post('farba'),
